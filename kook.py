@@ -52,7 +52,7 @@ def sendEmail(to, content):
 def run_kook():
     command = take_command()
     if 'hello' in command:                                                     #1. tell him hello
-        talk('Hello, Lithi!')
+        talk('Hello!')
     elif 'who are you' in command:                                             #2. ask him his identity
         talk('I am Kook. Your Virtual Voice Assistant. Tell me how may I help you?')
     elif 'how are you' in command:                                             #3. ask him how he is 
@@ -76,9 +76,9 @@ def run_kook():
         prog="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
         subprocess.Popen([prog])
     elif 'date' in command:
-        talk('Sorry little sister. I am way too busy.')                        #8. ask him on a date
+        talk('Sorry. I am way too busy.')                        #8. ask him on a date
     elif 'single' in command:
-        talk('No Lithi. I am not single. i am in a relationship with Alexa.')  #9. ask him if he is single
+        talk('No. I am not single. i am in a relationship with Alexa.')  #9. ask him if he is single
     elif 'email to my dad' in command:                                         #10. ask him to send email
         try:
             talk("What should I say?")
