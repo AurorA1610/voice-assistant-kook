@@ -44,6 +44,7 @@ def sendEmail(to, content):
     addr.ehlo()
     addr.starttls()
     f = open("Password.txt" '''the file in which you have kept the password of your email account''' , "r")
+    '''or you can just simply write your password in the code as "ThePassword" but it is unsafe'''
     a=f.read()
     addr.login('xyz@gmail.com' '''your email address''' , a)
     addr.sendmail('xyz@gmail.com' '''your email address''' , to, content)
@@ -73,7 +74,7 @@ def run_kook():
         talk(pyjokes.get_joke())
     elif 'chrome' in command:                                                  #7. tell him to open chrome
         kook.say('Opening Chrome..')
-        prog="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+        prog="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" '''the file path'''
         subprocess.Popen([prog])
     elif 'date' in command:
         talk('Sorry. I am way too busy.')                        #8. ask him on a date
